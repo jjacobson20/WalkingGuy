@@ -22,11 +22,11 @@ public class Man extends JComponent
 		this.setSize(31, 56);
 		
 		head = new Ellipse2D.Double(10, 0, 10, 10);
-		torso = new Rectangle(12, 10, 5, 10);
-		leftArm = new Rectangle(5, 10, 5, 5);
-		rightArm = new Rectangle(20, 10, 5, 5);
-		rightLeg = new Rectangle(17, 20, 2, 5);
-		leftLeg = new Rectangle(10, 20, 2, 5);
+		torso = new Rectangle(12, 10, 5, 12);
+		leftArm = new Rectangle(5, 10, 8, 2);
+		rightArm = new Rectangle(18, 10, 8, 2);
+		rightLeg = new Rectangle(17, 20, 2, 10);
+		leftLeg = new Rectangle(10, 20, 2, 10);
 	}
 	
 	public void drawShapes(Graphics2D g2, Shape ...s)
@@ -34,7 +34,6 @@ public class Man extends JComponent
 		for(Shape currentShape : s)
 		{
 			g2.fill(currentShape);
-			g2.draw(currentShape);
 		}
 	}
 	
