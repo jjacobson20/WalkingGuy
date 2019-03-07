@@ -15,6 +15,8 @@ public class Man extends JComponent
 {
 	private Ellipse2D.Double head;
 	private Rectangle leftArm, rightArm, leftLeg, rightLeg, torso;
+	private int dx;
+	private int dy;
 	
 	public Man(int x, int y)
 	{
@@ -41,5 +43,20 @@ public class Man extends JComponent
 	{
 		Graphics2D g2 = (Graphics2D)g;
 		drawShapes(g2, head, torso, leftArm, rightArm, rightLeg, leftLeg);
+	}
+	
+	public int getX()
+	{
+		return getLocation().x;
+	}
+	
+	public int getY()
+	{
+		return getLocation().y;
+	}
+	
+	public void update()
+	{
+		setLocation(getX() + dx, getY() + dy);
 	}
 }
